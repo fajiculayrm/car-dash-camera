@@ -1,5 +1,6 @@
 /*================= GOOGLE FONTS =================*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
 /*================= VARIABLES CSS =================*/
 :root {
     --header-height: 3.5rem;
@@ -85,9 +86,11 @@ img {
 }
 
 .section {
+    padding: 5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .section-title {
@@ -145,6 +148,13 @@ img {
     @media screen and (max-width: 1024px) {
         display: none;
     }
+}
+
+.hr {
+    margin: 0.5rem;
+    height: 0.2rem;
+    width: 15rem;
+    background-color: var(--third-color);
 }
 
 /*================= SHAPES =================*/
@@ -273,6 +283,7 @@ img {
 
 /* Mastbanner */
 .mastbanner {
+    padding: 0;
     justify-content: space-between;
     @media screen and (min-width: 768px) {
         flex-direction: row;
@@ -348,15 +359,14 @@ img {
 .section1 {
     position: relative;
     background-color: var(--fifth-color);
-    padding: 0 2rem;
-    @media screen and (min-width: 768px) {
+    padding: 5rem;
+    @media screen and (min-width: 1024px) {
         background-image: url(/assets/img/shapre.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 110%;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
         gap: 2rem;
     }
 }
@@ -371,7 +381,16 @@ img {
 
 .section1-text {
     @media screen and (min-width: 768px) {
+        width: 50%;
+    }
+    @media screen and (min-width: 1024px) {
         width: 40%;
+    }
+}
+
+.section1-text .section-title {
+    @media screen and (min-width: 1024px) {
+        width: 80%;
     }
 }
 
@@ -444,25 +463,21 @@ img {
 /* Section 2 */
 .section2 {
     background-color: var(--first-color);
-    padding-top: 2rem;
     text-align: center;
-}
-
-.section2 .hr {
-    margin: 0.5rem;
-    height: 0.2rem;
-    width: 15rem;
-    background-color: var(--third-color);
 }
 
 .section2 > p {
     margin: 2rem;
-    width: 70%;
+    width: 90%;
+    @media screen and (min-width: 768px) {
+        width: 50%;
+    }
 }
 
 .section2-container {
-    text-align: left;
+    margin: 0 auto;
     display: grid;
+    text-align: left;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     @media screen and (min-width: 1024px) {
@@ -497,15 +512,26 @@ img {
 .section2-additional {
     width: 90%;
     margin-top: 2rem;
+    padding-bottom: 3rem;
+    @media screen and (min-width: 1024px) {
+        width: 50%;
+    }
 }
 
 .section2-additional img {
     margin: 1rem;
 }
 
+.section2-additional span {
+    font-weight: var(--font-bold);
+}
+
 /* Section 3 */
+.section3 {
+    background-color: var(--fifth-color);
+}
 .section3-container ul {
-    margin-top: 2rem;
+    padding-top: 2rem;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -540,5 +566,193 @@ img {
 }
 
 /* Section 4 */
+.section4 .section-title span {
+    display: block;
+}
+
+.section4-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.section4-box > div {
+    padding: 1rem;
+}
+
+.section4-box .box1 {
+    @media screen and (min-width: 768px) {
+        border-right: 0.2rem solid var(--fifth-color);
+    }
+}
+
+.section4-box .fa-solid,
+.section4-box .fa-regular {
+    color: #ffd202;
+}
+
+.section4-box .box2-item .stars,
+.section4-box .box2-item .graph {
+    display: inline-block;
+}
+
+.section4-box .box2-item {
+    position: relative;
+}
+
+.section4-box .box2-item .stars {
+    position: absolute;
+    left: 0;
+}
+
+.section4-box .box2 .graph {
+    margin-left: 10rem;
+    width: 10em;
+    height: 1rem;
+    background-color: lightgray;
+    margin-bottom: 0.1rem;
+}
+
+.section4-box .box2 .percent {
+    display: inline-block;
+    height: 1rem;
+    background-color: var(--second-color);
+}
+
+.section4-box .box2-item:nth-child(1) .percent {
+    width: 90%;
+}
+
+.section4-box .box2-item:nth-child(2) .percent {
+    width: 10%;
+}
+
+.section4-box .box2-item:nth-child(3) .percent {
+    width: 5%;
+}
+
+.section4-box .box2-item:nth-child(4) .percent {
+    width: 3%;
+}
+
+.section4-box .box2-item:nth-child(5) .percent {
+    width: 1%;
+}
+
+.review-slide {
+    width: 60%;
+    @media screen and (min-width: 758px) {
+        width: 80%;
+    }
+}
+
+.glider-contain .dots {
+    margin-top: 2rem;
+}
+
+.glider-prev {
+    left: -50px;
+}
+
+.glider-next {
+    right: -50px;
+}
+
+.glider {
+    overflow: hidden;
+}
+
+.glider .card {
+    margin: 0 2rem;
+}
+
+.glider .chat {
+    position: relative;
+    background-color: var(--fifth-color);
+    padding: 2rem;
+}
+
+/* Right triangle, left side slightly down */
+.glider .chat:before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: auto;
+    left: 30px;
+    bottom: -30px;
+    border: 20px solid;
+    border-color: var(--fifth-color) transparent transparent var(--fifth-color);
+}
+
+.glider .title {
+    font-weight: var(--font-bold);
+    margin-bottom: 1rem;
+}
+
+.glider-contain .fa-sharp {
+    padding: 0.5rem;
+    border: 0.2rem solid var(--second-color);
+}
+
+.glider .chat span {
+    font-family: sans-serif;
+    font-size: 6rem;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    color: var(--third-color);
+}
+.glider .person {
+    padding: 3em 0;
+    position: relative;
+}
+
+.glider .person .name {
+    margin-left: 5rem;
+    margin-top: 1rem;
+}
+
+.glider .person .f-letter {
+    position: absolute;
+    display: inline-block;
+    color: var(--first-color);
+    font-size: 3rem;
+    padding: 0.2rem 1.2rem 0.2rem 1.1rem;
+    border-radius: 50%;
+    background-color: #494949;
+}
+.glider .person .f-letter i {
+    color: green;
+    border: 2px solid var(--first-color);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -12px;
+    font-size: 2rem;
+    right: -12px;
+}
+
+.glider .person .name span {
+    display: block;
+}
 
 /* Section 5 */
+
+.section5 .hr {
+    width: min(90%, 30rem);
+}
+
+.section5 > p {
+    text-align: center;
+    width: 80%;
+    margin: 1rem 0;
+}
+
+.section5 > p span {
+    font-weight: var(--font-bold);
+}
