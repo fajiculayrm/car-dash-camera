@@ -851,6 +851,10 @@ img {
   border: none;
 }
 
+.section5-box-list li i {
+  margin-right: 0.1rem;
+}
+
 .section5-box-list span {
   color: #007cca;
 }
