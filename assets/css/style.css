@@ -154,6 +154,20 @@ img {
   background-color: var(--third-color);
 }
 
+.noise-hr {
+  width: 100%;
+  height: 2rem;
+  background: linear-gradient(to right, rgba(254, 115, 54, 0.5), var(--first-color)), url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
+.noise-hr:last-child {
+  background: linear-gradient(to right, rgba(254, 115, 54, 0.5), var(--second-color)), url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
+.noise-hr.bt {
+  border-top: 0.2rem solid #000;
+}
+
 /*================= SHAPES =================*/
 /*================= HEADER AND NAV =================*/
 .header {
@@ -293,7 +307,7 @@ img {
   .mastbanner {
     flex-direction: row;
     align-items: flex-start;
-    height: 40rem;
+    height: 45rem;
   }
 }
 
@@ -341,12 +355,15 @@ img {
   margin-bottom: 1rem;
 }
 
+.mastbanner-text p {
+  margin-top: 2rem;
+}
+
 .mastbanner-text span {
   font-weight: var(--font-bold);
 }
 
 .police-claim {
-  margin-top: 1rem;
   font-weight: var(--font-bold);
   display: flex;
   align-items: center;
@@ -357,6 +374,7 @@ img {
 }
 
 .police-claim img {
+  margin-top: 2rem;
   width: 2rem;
   vertical-align: middle;
   margin-right: 1rem;
@@ -364,7 +382,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .mastbanner-img {
-    height: 40rem;
+    height: 45rem;
   }
 }
 
@@ -692,7 +710,7 @@ img {
 }
 
 .glider-contain .dots {
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
 .glider-prev {
@@ -715,6 +733,11 @@ img {
   position: relative;
   background-color: var(--fifth-color);
   padding: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .glider .chat {
+    height: 15rem;
+  }
 }
 
 /* Right triangle, left side slightly down */
@@ -749,6 +772,10 @@ img {
   color: var(--third-color);
 }
 
+.glider .chat p {
+  font-style: italic;
+}
+
 .glider .person {
   padding: 3em 0;
   position: relative;
@@ -757,6 +784,10 @@ img {
 .glider .person .name {
   margin-left: 5rem;
   margin-top: 1rem;
+}
+
+.glider .person .name span {
+  font-style: italic;
 }
 
 .glider .person .f-letter {
@@ -790,10 +821,71 @@ img {
 
 .section5 > p {
   text-align: center;
-  width: 80%;
+  width: min(80%, 768px);
   margin: 1rem 0;
 }
 
 .section5 > p span {
   font-weight: var(--font-bold);
+}
+
+.section5-box-list {
+  background-color: #e9edef;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: min(90%, 768px);
+  border: 1px solid #d1dfe9;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  font-weight: var(--font-bold);
+}
+
+.section5-box-list li {
+  padding: 1rem 3rem;
+  border-right: 0.1rem solid #d1dfe9;
+}
+
+.section5-box-list li:last-child {
+  border: none;
+}
+
+.section5-box-list span {
+  color: #007cca;
+}
+
+.section5-box {
+  background-color: #d8eff0;
+  width: min(90%, 1000px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .section5-box {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.section5-box img {
+  margin-right: 2rem;
+}
+
+.section5-box .title {
+  font-weight: var(--font-bold);
+  display: block;
+}
+
+/*================= FOOTER =================*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
