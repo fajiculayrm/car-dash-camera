@@ -333,7 +333,7 @@ img {
   margin: 1rem auto;
   transition: 0.8s;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .mastbanner-text .main-order-now {
     position: fixed;
     bottom: 0;
@@ -342,6 +342,9 @@ img {
     left: 0;
     z-index: 5;
     border: 0.5rem solid #0691db;
+  }
+  .mastbanner-text .main-order-now:hover {
+    border-radius: 0;
   }
 }
 @media screen and (min-width: 1024px) {
