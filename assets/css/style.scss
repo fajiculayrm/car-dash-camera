@@ -403,7 +403,7 @@ img {
 .section1 {
     position: relative;
     background-color: var(--fifth-color);
-    padding: 5rem;
+    padding: 0 3rem 5rem 3rem;
     @media screen and (min-width: 1024px) {
         background-image: url(/assets/img/shapre.png);
         background-repeat: no-repeat;
@@ -440,10 +440,10 @@ img {
 
 .section1-box {
     background-color: var(--first-color);
-    width: 90%;
+    width: 100vw;
     padding: 1rem 3rem;
-    margin-top: 2rem;
     @media screen and (min-width: 768px) {
+        margin-top: 2rem;
         margin: 0;
         position: absolute;
         top: -2rem;
@@ -455,8 +455,8 @@ img {
 
 .section1-box ul {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    gap: 2rem;
 }
 
 .section1-box li {
@@ -472,6 +472,7 @@ img {
 
 .section1-box li img {
     width: 1.5rem;
+    height: 1.5rem;
     display: block;
     margin-bottom: 0.5rem;
 }
