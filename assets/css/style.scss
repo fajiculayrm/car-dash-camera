@@ -322,10 +322,10 @@ img {
     @media screen and (min-width: 1024px) {
         text-align: left;
         padding: 3rem;
+        width: 50%;
     }
     @media screen and (min-width: 1440px) {
         padding: 5rem;
-        width: 50%;
     }
 }
 
@@ -337,7 +337,7 @@ img {
         position: fixed;
         bottom: 0;
         margin: 0;
-        width: 100vw;
+        width: 100%;
         left: 0;
         z-index: 5;
         border: 0.5rem solid #0691db;
@@ -390,12 +390,14 @@ img {
 
 .mastbanner-img {
     width: 100%;
+
     @media screen and (min-width: 1024px) {
-        width: 40rem;
+        width: initial;
         height: 45rem;
+        margin-right: -25rem;
     }
     @media screen and (min-width: 1440px) {
-        width: 80rem;
+        margin-right: 0;
     }
 }
 
@@ -404,6 +406,7 @@ img {
     position: relative;
     background-color: var(--fifth-color);
     padding: 0 3rem 5rem 3rem;
+    width: 100%;
     @media screen and (min-width: 1024px) {
         background-image: url(/assets/img/shapre.png);
         background-repeat: no-repeat;
