@@ -309,7 +309,7 @@ img {
 .mastbanner {
     padding: 0;
     justify-content: space-between;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
         flex-direction: row;
         align-items: flex-start;
         height: 45rem;
@@ -317,39 +317,46 @@ img {
 }
 
 .mastbanner-text {
+    text-align: center;
     padding: 2rem;
-    @media screen and (min-width: 768px) {
-        padding: 2rem 3rem;
-        width: 50%;
-    }
     @media screen and (min-width: 1024px) {
+        text-align: left;
         padding: 3rem;
-        width: 40%;
     }
     @media screen and (min-width: 1440px) {
         padding: 5rem;
-    }
-}
-
-.mastbanner-img {
-    @media screen and (min-width: 768px) {
         width: 50%;
-    }
-    @media screen and (min-width: 1024px) {
-        width: 60%;
     }
 }
 
 .mastbanner-text .main-order-now {
-    margin: 1rem 0;
+    width: 90vw;
+    margin: 1rem auto;
+    transition: 0.8s;
+    @media screen and (max-width: 1024px) {
+        position: fixed;
+        bottom: 0;
+        margin: 0;
+        width: 100vw;
+        left: 0;
+        z-index: 5;
+        border: 0.5rem solid #0691db;
+    }
+    @media screen and (min-width: 1024px) {
+        margin: 1rem 0;
+        width: fit-content;
+    }
 }
 
 .mastbanner-text .title {
     font-size: var(--h1-font-size);
     font-weight: var(--font-bolder);
     color: var(--third-color);
-    text-align: left;
+    text-align: center;
     margin-bottom: 1rem;
+    @media screen and (min-width: 1024px) {
+        text-align: left;
+    }
 }
 
 .mastbanner-text p {
@@ -363,6 +370,11 @@ img {
     font-weight: var(--font-bold);
     display: flex;
     align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    @media screen and (min-width: 1024px) {
+        margin: 0;
+    }
 }
 
 .police-claim span {
@@ -377,8 +389,13 @@ img {
 }
 
 .mastbanner-img {
-    @media screen and (min-width: 768px) {
+    width: 100%;
+    @media screen and (min-width: 1024px) {
+        width: 40rem;
         height: 45rem;
+    }
+    @media screen and (min-width: 1440px) {
+        width: 50rem;
     }
 }
 
@@ -391,7 +408,7 @@ img {
         background-image: url(/assets/img/shapre.png);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 110%;
+        background-size: 100vw 100vh;
         flex-direction: row;
         justify-content: center;
         gap: 2rem;
